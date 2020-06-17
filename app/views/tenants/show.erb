@@ -1,0 +1,12 @@
+<h4>Name:</h4>
+<%=@tenant.name%><br/>
+
+<h4>Tenant Address:</h4>
+<a href="/apartments/<%=@tenant.apartment_id%>">
+    <%=@tenant.apartment.address%><br/>
+</a>
+
+
+<a href="/tenants/<%=@tenant.id%>/edit"> 
+    <%="Edit Tenant"%>
+</a>

@@ -1,3 +1,5 @@
+<a class="button" href="/apartments">All Apartments</a>
+
 <ul> Tenants:
 <%@tenants.each do |tenant|%>
     <a href="/tenants/<%=tenant.id%>">
@@ -5,3 +7,7 @@
     </a>
 <%end%>
 </ul>
+
+<a href="/tenants/new"> 
+    <%="Create New Tenant"%>
+</a>
