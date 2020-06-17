@@ -1,1 +1,16 @@
+<form action="/tenants/<%=@tenant.id%>" method="POST">
+<input type="hidden" name="_method" value="patch">
+    <input type="text" name="name" value="<%=@tenant.name%>"/>
+    
+    <select name="tenant[:apartment_id]">
+    <option disabled selected> -- Select an Apartment -- </option>
+    <% @apartments.tenants.each do |tenant| %>
+        <option value=<%= tenant.id %> > 
+            <%= apartment.address %> 
+        </option>
+    <% end %>
+    </select>
 
+    <input type="submit" value="Edit Tenant"/>
+
+</form>
